@@ -57,7 +57,7 @@ class Ui_MainWindow(object):
         self.toolButton.setSizePolicy(sizePolicy)
         self.toolButton.setMinimumSize(QtCore.QSize(93, 0))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../Repositories/cv-analysis/icons/plus-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/icons/plus-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolButton.setIcon(icon)
         self.toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
         self.toolButton.setObjectName("toolButton")
@@ -70,7 +70,7 @@ class Ui_MainWindow(object):
         self.toolButton_2.setSizePolicy(sizePolicy)
         self.toolButton_2.setMinimumSize(QtCore.QSize(93, 0))
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../../Repositories/cv-analysis/icons/minus-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/icons/minus-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolButton_2.setIcon(icon1)
         self.toolButton_2.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
         self.toolButton_2.setObjectName("toolButton_2")
@@ -84,7 +84,7 @@ class Ui_MainWindow(object):
         self.manual_fit_button = QtWidgets.QToolButton(self.centralwidget)
         self.manual_fit_button.setMinimumSize(QtCore.QSize(100, 30))
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("../../Repositories/cv-analysis/icons/play.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(":/icons/play.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.manual_fit_button.setIcon(icon2)
         self.manual_fit_button.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
         self.manual_fit_button.setObjectName("manual_fit_button")
@@ -92,7 +92,7 @@ class Ui_MainWindow(object):
         self.automatic_fit_button = QtWidgets.QToolButton(self.centralwidget)
         self.automatic_fit_button.setMinimumSize(QtCore.QSize(100, 30))
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("../../Repositories/cv-analysis/icons/auto-flash.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(":/icons/auto-flash.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.automatic_fit_button.setIcon(icon3)
         self.automatic_fit_button.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
         self.automatic_fit_button.setAutoRaise(False)
@@ -217,7 +217,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.addLayout(self.gridLayout)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1025, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1025, 27))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -261,3 +261,4 @@ class Ui_MainWindow(object):
 
 from gui.cvtreewidget import CVTreeWidget
 from gui.mplcanvas import MplCanvas
+import icons_rc

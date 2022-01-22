@@ -15,7 +15,7 @@ import sys
 import traceback
 
 from utils import find_maximas, grouping
-from graphical_tools import MaxMinFinder, LineFit
+#from graphical_tools import MaxMinFinder, LineFit
 
 # from sys import exit
 
@@ -134,42 +134,42 @@ class SCVAnalysis:
                 tb_text = traceback.format_exc()
                 self.cathode_data = ElectrodeData(error=tb_text)
 
-    def _graphic_ip(self, work_mode="both"):
-        if work_mode in ("anode", "both"):
-            print(work_mode)
-            peak_finder = MaxMinFinder(self.ox_voltage, self.ox_current, "max")
-            max_coord, max_idx = peak_finder.run()
-            cap_fit = LineFit(self.ox_voltage, self.ox_current, max_coord)
-            fit_mask, ip_base, fit_params = cap_fit.run()
-            self.anode_data = ElectrodeData(
-                ip=max_coord[1] - ip_base,
-                work_mode=work_mode,
-                fit_mode="graphic",
-                peak_base=ip_base,
-                current_max=max_coord[1],
-                peak_volt=max_coord[0],
-                peak_index=max_idx,
-                capacitive_fit=fit_params,
-                fit_data_bool=fit_mask,
-            )
+    # def _graphic_ip(self, work_mode="both"):
+    #     if work_mode in ("anode", "both"):
+    #         print(work_mode)
+    #         #peak_finder = MaxMinFinder(self.ox_voltage, self.ox_current, "max")
+    #         max_coord, max_idx = peak_finder.run()
+    #         # cap_fit = LineFit(self.ox_voltage, self.ox_current, max_coord)
+    #         fit_mask, ip_base, fit_params = cap_fit.run()
+    #         self.anode_data = ElectrodeData(
+    #             ip=max_coord[1] - ip_base,
+    #             work_mode=work_mode,
+    #             fit_mode="graphic",
+    #             peak_base=ip_base,
+    #             current_max=max_coord[1],
+    #             peak_volt=max_coord[0],
+    #             peak_index=max_idx,
+    #             capacitive_fit=fit_params,
+    #             fit_data_bool=fit_mask,
+    #         )
 
-        if work_mode in ("cathode", "both"):
-            print(work_mode)
-            peak_finder = MaxMinFinder(self.red_voltage, self.red_current, "min")
-            max_coord, max_idx = peak_finder.run()
-            cap_fit = LineFit(self.red_voltage, self.red_current, max_coord)
-            fit_mask, ip_base, fit_params = cap_fit.run()
-            self.cathode_data = ElectrodeData(
-                ip=max_coord[1] - ip_base,
-                work_mode=work_mode,
-                fit_mode="graphic",
-                peak_base=ip_base,
-                current_max=max_coord[1],
-                peak_volt=max_coord[0],
-                peak_index=max_idx,
-                capacitive_fit=fit_params,
-                fit_data_bool=fit_mask,
-            )
+    #     if work_mode in ("cathode", "both"):
+    #         print(work_mode)
+    #         peak_finder = MaxMinFinder(self.red_voltage, self.red_current, "min")
+    #         max_coord, max_idx = peak_finder.run()
+    #         cap_fit = LineFit(self.red_voltage, self.red_current, max_coord)
+    #         fit_mask, ip_base, fit_params = cap_fit.run()
+    #         self.cathode_data = ElectrodeData(
+    #             ip=max_coord[1] - ip_base,
+    #             work_mode=work_mode,
+    #             fit_mode="graphic",
+    #             peak_base=ip_base,
+    #             current_max=max_coord[1],
+    #             peak_volt=max_coord[0],
+    #             peak_index=max_idx,
+    #             capacitive_fit=fit_params,
+    #             fit_data_bool=fit_mask,
+    #         )
 
     def _split(self):
         # find maxima in voltage and split voltage and current in two arrays

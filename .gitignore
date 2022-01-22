@@ -132,3 +132,7 @@ dmypy.json
 ./GamryReadDTA.py
 ./test.py
 ./test*.py
+
+
+# QtCreator user files?
+*pyproject.user

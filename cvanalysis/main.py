@@ -5,19 +5,29 @@ Created on Mon Mar 15 15:25:35 2021
 
 @author: mattia
 """
-# from read_input import CyclicVoltammetry
-# from cvanalysis import SCVAnalysis, CCVAnalysis
-# from graphical_tools import MaxMinFinder, LineFit
-
 import sys
+from os import getcwd
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import QAction, QFileDialog
 from PyQt5.QtGui import QIcon
 from PyQt5.Qt import QStandardItemModel, QStandardItem, QLayout
+import importlib
+from pathlib import Path
 
-from MainWindow import Ui_MainWindow
-from file_handler import FileHandler
-from gui.GUI_dataclasses import MplChekboxStates
+cvanalysis_spec = importlib.util.find_spec("cvanalysis")
+found = cvanalysis_spec is not None
+
+if not found:
+    print('---- Loading local version of the package ----')
+    current_path = getcwd()
+    path = Path(current_path)
+    parent_path = str(path.parent.absolute())
+    sys.path.insert(0, parent_path)
+
+
+from cvanalysis.MainWindow import Ui_MainWindow
+from cvanalysis.file_handler import FileHandler
+from cvanalysis.gui.GUI_dataclasses import MplChekboxStates
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -220,5 +230,9 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = MainWindow()
     window.show()
-
+ 
     sys.exit(app.exec())
+
+# DEV: remove local package from python path
+if not found:
+    sys.path.pop(0)

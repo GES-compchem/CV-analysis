@@ -108,8 +108,8 @@
            <string>    Add</string>
           </property>
           <property name="icon">
-           <iconset>
-            <normaloff>../../Repositories/cv-analysis/icons/plus-square.svg</normaloff>../../Repositories/cv-analysis/icons/plus-square.svg</iconset>
+           <iconset resource="icons.qrc">
+            <normaloff>:/icons/plus-square.svg</normaloff>:/icons/plus-square.svg</iconset>
           </property>
           <property name="toolButtonStyle">
            <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -134,8 +134,8 @@
            <string> Remove</string>
           </property>
           <property name="icon">
-           <iconset>
-            <normaloff>../../Repositories/cv-analysis/icons/minus-square.svg</normaloff>../../Repositories/cv-analysis/icons/minus-square.svg</iconset>
+           <iconset resource="icons.qrc">
+            <normaloff>:/icons/minus-square.svg</normaloff>:/icons/minus-square.svg</iconset>
           </property>
           <property name="toolButtonStyle">
            <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -165,8 +165,8 @@
            <string>Manual fit</string>
           </property>
           <property name="icon">
-           <iconset>
-            <normaloff>../../Repositories/cv-analysis/icons/play.svg</normaloff>../../Repositories/cv-analysis/icons/play.svg</iconset>
+           <iconset resource="icons.qrc">
+            <normaloff>:/icons/play.svg</normaloff>:/icons/play.svg</iconset>
           </property>
           <property name="toolButtonStyle">
            <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -185,8 +185,8 @@
            <string> Auto fit</string>
           </property>
           <property name="icon">
-           <iconset>
-            <normaloff>../../Repositories/cv-analysis/icons/auto-flash.svg</normaloff>../../Repositories/cv-analysis/icons/auto-flash.svg</iconset>
+           <iconset resource="icons.qrc">
+            <normaloff>:/icons/auto-flash.svg</normaloff>:/icons/auto-flash.svg</iconset>
           </property>
           <property name="toolButtonStyle">
            <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -495,7 +495,7 @@
      <x>0</x>
      <y>0</y>
      <width>1025</width>
-     <height>22</height>
+     <height>27</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -527,6 +527,8 @@
    <header>gui/cvtreewidget.h</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

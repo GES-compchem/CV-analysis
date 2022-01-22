@@ -2,11 +2,11 @@ import setuptools
 
 
 setuptools.setup(
-    name="GES-echem-suite",
-    version="0.1.10a",
+    name="CV-analysis",
+    version="0.1.0a",
     description="",
     long_description="",
-    packages=["echemsuite"],
-    package_data={'echemsuite': ['cellcycling/*', 'cyclicvoltammetry/*',],},
+    packages=["cvanalysis"],
+    package_data={'cvanalysis': ['gui/*', 'icons/*',],},
     install_requires=[],
 )

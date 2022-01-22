@@ -6,8 +6,8 @@ Created on Fri Apr 16 11:26:48 2021
 @author: mattia
 """
 
-from read_input import CyclicVoltammetry
-from cvanalysis import SCVAnalysis
+from echemsuite.cyclicvoltammetry import CyclicVoltammetry
+from cvanalysis.cv_analysis import SCVAnalysis
 
 import os
 import glob
@@ -35,8 +35,9 @@ class FileHandler:
             try:
                 cv = CyclicVoltammetry(filepath)
             # TODO: the following should be fixed with a custom FileTypeError
-            except Exception:
+            except Exception as error:
                 print(f"Could not read file {filepath}")
+                print(error)
                 continue
             self.cvs[filepath] = cv
 
