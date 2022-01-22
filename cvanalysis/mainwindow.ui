@@ -134,8 +134,8 @@
            <string> Remove</string>
           </property>
           <property name="icon">
-           <iconset>
-            <normaloff>:/icons/minus-square.svg</normaloff>:/icons/minus-square.svg</iconset>
+           <iconset resource="icons.qrc">
+            <normaloff>:/cvanalysis/icons/minus-square.svg</normaloff>:/cvanalysis/icons/minus-square.svg</iconset>
           </property>
           <property name="toolButtonStyle">
            <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -165,8 +165,8 @@
            <string>Manual fit</string>
           </property>
           <property name="icon">
-           <iconset>
-            <normaloff>:/icons/play.svg</normaloff>:/icons/play.svg</iconset>
+           <iconset resource="icons.qrc">
+            <normaloff>:/cvanalysis/icons/play.svg</normaloff>:/cvanalysis/icons/play.svg</iconset>
           </property>
           <property name="toolButtonStyle">
            <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -185,8 +185,8 @@
            <string> Auto fit</string>
           </property>
           <property name="icon">
-           <iconset>
-            <normaloff>:/icons/auto-flash.svg</normaloff>:/icons/auto-flash.svg</iconset>
+           <iconset resource="icons.qrc">
+            <normaloff>:/cvanalysis/icons/auto-flash.svg</normaloff>:/cvanalysis/icons/auto-flash.svg</iconset>
           </property>
           <property name="toolButtonStyle">
            <enum>Qt::ToolButtonTextBesideIcon</enum>

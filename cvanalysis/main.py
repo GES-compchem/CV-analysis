@@ -9,9 +9,9 @@ import sys
 from os import getcwd
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import QAction, QFileDialog
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.Qt import QStandardItemModel, QStandardItem, QLayout
-import importlib
+import importlib.util
 from pathlib import Path
 
 cvanalysis_spec = importlib.util.find_spec("cvanalysis")
@@ -47,11 +47,17 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # File menu entries
         file_menu = menu.addMenu("&File")
         
-        open_files_action = QAction(QIcon(r"icons/folder-plus.svg"), "Open file(s)", self)
+        icon_add_file = QIcon()
+        icon_add_file.addPixmap(QPixmap(":/cvanalysis/icons/plus-square.svg"), QIcon.Normal, QIcon.Off)
+        
+        open_files_action = QAction(icon_add_file, "Open file(s)", self)
         open_files_action.triggered.connect(self.open_files)
         file_menu.addAction(open_files_action)
         
-        open_folder_action = QAction(QIcon(r"icons/folder-plus.svg"), "Open folder", self)
+        icon_add_folder = QIcon()
+        icon_add_folder.addPixmap(QPixmap(":/cvanalysis/icons/folder-plus.svg"), QIcon.Normal, QIcon.Off)
+        
+        open_folder_action = QAction(icon_add_folder, "Open folder", self)
         open_folder_action.triggered.connect(self.open_folder)
         file_menu.addAction(open_folder_action)
 
