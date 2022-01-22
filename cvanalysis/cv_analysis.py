@@ -14,7 +14,7 @@ from scipy import integrate
 import sys
 import traceback
 
-from utils import find_maximas, grouping
+from cvanalysis.utils import find_maximas, grouping
 #from graphical_tools import MaxMinFinder, LineFit
 
 # from sys import exit

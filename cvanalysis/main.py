@@ -226,6 +226,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.MplCanvas.cv_plot(filepath, cycle, self.MplCanvas_checkbox_states())
 
 
+def run_application():
+    app = QtWidgets.QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+ 
+    sys.exit(app.exec())   
+
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = MainWindow()

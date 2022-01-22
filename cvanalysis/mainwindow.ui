@@ -109,7 +109,7 @@
           </property>
           <property name="icon">
            <iconset resource="icons.qrc">
-            <normaloff>:/icons/plus-square.svg</normaloff>:/icons/plus-square.svg</iconset>
+            <normaloff>:/cvanalysis/icons/plus-square.svg</normaloff>:/cvanalysis/icons/plus-square.svg</iconset>
           </property>
           <property name="toolButtonStyle">
            <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -134,7 +134,7 @@
            <string> Remove</string>
           </property>
           <property name="icon">
-           <iconset resource="icons.qrc">
+           <iconset>
             <normaloff>:/icons/minus-square.svg</normaloff>:/icons/minus-square.svg</iconset>
           </property>
           <property name="toolButtonStyle">
@@ -165,7 +165,7 @@
            <string>Manual fit</string>
           </property>
           <property name="icon">
-           <iconset resource="icons.qrc">
+           <iconset>
             <normaloff>:/icons/play.svg</normaloff>:/icons/play.svg</iconset>
           </property>
           <property name="toolButtonStyle">
@@ -185,7 +185,7 @@
            <string> Auto fit</string>
           </property>
           <property name="icon">
-           <iconset resource="icons.qrc">
+           <iconset>
             <normaloff>:/icons/auto-flash.svg</normaloff>:/icons/auto-flash.svg</iconset>
           </property>
           <property name="toolButtonStyle">
@@ -518,13 +518,13 @@
   <customwidget>
    <class>MplCanvas</class>
    <extends>QWidget</extends>
-   <header>gui/mplcanvas.h</header>
+   <header>cvanalysis.gui/mplcanvas.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>CVTreeWidget</class>
    <extends>QTreeWidget</extends>
-   <header>gui/cvtreewidget.h</header>
+   <header>cvanalysis.gui/cvtreewidget.h</header>
   </customwidget>
  </customwidgets>
  <resources>

@@ -57,7 +57,7 @@ class Ui_MainWindow(object):
         self.toolButton.setSizePolicy(sizePolicy)
         self.toolButton.setMinimumSize(QtCore.QSize(93, 0))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icons/plus-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/cvanalysis/icons/plus-square.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolButton.setIcon(icon)
         self.toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
         self.toolButton.setObjectName("toolButton")
@@ -259,6 +259,6 @@ class Ui_MainWindow(object):
         self.cathode_capfit_checkbox.setText(_translate("MainWindow", "Cap. fit"))
         self.cathode_ip_checkbox.setText(_translate("MainWindow", "Peak ip"))
 
-from gui.cvtreewidget import CVTreeWidget
-from gui.mplcanvas import MplCanvas
-import icons_rc
+from cvanalysis.gui.cvtreewidget import CVTreeWidget
+from cvanalysis.gui.mplcanvas import MplCanvas
+from . import icons_rc

@@ -1,5 +1,5 @@
 {% set name = "CV-analysis" %}
-{% set version = "0.1.0a" %}
+{% set version = "0.1.5a" %}
 
 
 
@@ -10,11 +10,14 @@ package:
 
 
 source:
-  url: https://github.com/GES-compchem/{{ name }}/archive/refs/tags/{{ version }}.zip
+  # url: https://github.com/GES-compchem/{{ name }}/archive/refs/tags/{{ version }}.zip
+  path: .
 
 build:
   noarch: python
   number: 0
+  entry_points:
+    - testapp = cvanalysis.main:run_application
 
 
 
@@ -30,9 +33,10 @@ requirements:
     - pandas>=1.3.0
     - scipy
     - matplotlib
+    - ges-echem-suite
 
 app:
-  entry: python main.py
+  entry: testapp
 
 about:
   home: The package home page

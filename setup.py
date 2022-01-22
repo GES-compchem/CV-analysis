@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="CV-analysis",
-    version="0.1.0a",
+    version="0.1.5a",
     description="",
     long_description="",
     packages=["cvanalysis"],
